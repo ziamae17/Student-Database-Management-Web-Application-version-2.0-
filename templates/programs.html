@@ -1,0 +1,110 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+.carousel {
+	margin: 30px 0;
+    background: #ccc;
+}
+.carousel .carousel-item {
+    text-align: center;
+	overflow: hidden;
+    height: 400px;
+}
+.carousel .carousel-item img {
+	max-width: 100%;
+    margin: 0 auto; /* Align slide image horizontally center in Bootstrap v3 */
+}
+img {
+  width: 1100px;
+
+}
+.carousel-caption h3, .carousel-caption p {
+	color: #fff;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: none;
+	margin-bottom: 20px;
+}
+.carousel-caption h3 {
+	background: rgba(0,0,0,0.9);
+	padding: 12px 24px;
+	font-size: 40px;	
+	text-transform: uppercase;
+}
+.carousel-caption p {
+	background: #20b0b9;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: 300;
+}
+.carousel .nav {	
+	background: #eee;
+}
+.carousel .nav a {
+	color: #333;
+	border-radius: 0;
+	font-size: 85%;
+	padding: 10px 16px;
+	background: transparent;
+}
+.carousel .nav .active a {
+	color: #fff;
+	background: #20b0b9;
+}
+.carousel .nav strong {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 110%;
+	text-transform: uppercase;
+}
+
+</style>
+
+<script>
+$(document).ready(function(){
+	// Highlight bottom nav links
+	var clickEvent = false;
+	$("#myCarousel").on("click", ".nav a", function(){
+		clickEvent = true;
+		$(this).parent().siblings().removeClass("active");
+		$(this).parent().addClass("active");		
+	}).on("slid.bs.carousel", function(e){
+		if(!clickEvent){
+			itemIndex = $(e.relatedTarget).index();
+			targetNavItem = $(".nav li[data-slide-to='" + itemIndex + "']");
+			$(".nav li").not(targetNavItem).removeClass("active");
+			targetNavItem.addClass("active");
+		}
+		clickEvent = false;
+	});
+});
+</script>
+</head>
+<body>
+<div class="container-lg">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="{{url_for('static', filename = 'cover.png')}}" class="img-fluid" alt="Notebook">
+					</div>	
+					<div class="carousel-item">
+						<img src="{{url_for('static', filename = 'academics.png')}}" class="img-fluid" alt="Tablet">
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<ol class="nav nav-pills nav-justified">
+					<li data-slide-to="0" class="nav-item active"><a href="/collegelist" class="nav-link"><strong>colleges</strong>We offer a wide range of programs that will inspire and challenge you.</a></li>
+					<li data-slide-to="1" class="nav-item"><a href="/deptlist" class="nav-link"><strong>Departments</strong>Preparing you for careers or graduate study in your chosen field.</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+{% endblock %}

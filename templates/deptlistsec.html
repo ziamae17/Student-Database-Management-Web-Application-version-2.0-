@@ -1,0 +1,216 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<style>
+hr.new {
+  border-top: 3px solid #ff0000;
+}
+hr.new1 {
+  border-top: 3px solid #191970;
+}
+hr.new2 {
+  border-top: 3px solid #228b22;
+}
+a.color1 {
+  color:  black;
+}
+</style>
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading -->
+    <br>
+    <br>
+    <h4>College of Science & Mathematics</h4>
+    <hr class="new"></hr>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'physics.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Physics Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'biology.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Biological Sciences Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'chemistry.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Chemistry Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'mathematics.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Mathematics & Statistics Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <h4>College of Education</h4>
+    <hr class="new1" ></hr>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'tech-ed.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Technology Teacher Education Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'physical.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Physical Education Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'professional.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Professional Education Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'sci-ed.png')}}" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" class="color1"><h6><b>Science and Mathematics Department</b></h6></a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<div class="container">
+  <h4>College of Arts & Social Sciences</h4>
+  <hr class="new2" ></hr>
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'psycho.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>Psychology Department</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'english.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>English Department</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'filipino.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>Departamento ng Filipino at ibang mga Wika</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'history.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>History Department</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'political.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>Political Science Department</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{url_for('static', filename = 'sociology.png')}}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#" class="color1"><h6><b>Sociology Department</b></h6></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- /.row -->
+  
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="/deptlist" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/deptlist">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="/deptlistsec">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+      </li>
+    </ul>
+  
+  </div>
+  <!-- /.container -->
+
+
+
+
+
+{% endblock %}
